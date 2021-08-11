@@ -1,0 +1,14 @@
+<app-add-task
+(addTask)="addTaskBtn($event)">
+</app-add-task>
+<!-- <app-button 
+    text="Add" 
+    color="green"
+    (btnClick)="addTaskBtn(tasks)"
+    ></app-button> -->
+<app-task-item 
+*ngFor="let task of tasks" 
+[task]="task"
+(deleteTask)="onDeleteTask(task)"
+(toggleTask)="onToggleTask(task)"
+></app-task-item>
